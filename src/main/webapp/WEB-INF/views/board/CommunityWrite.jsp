@@ -20,7 +20,7 @@
 
     <script>
         function writeform_check(){
-            var writeForm = document.writeForm;
+            var WriteForm = document.WriteForm;
             let cb_title = $("#cb_title").val();
 
             if(cb_title == ""){
@@ -29,9 +29,9 @@
                 return false;
             };
 
-            writeForm.method = "post";
-            writeForm.action = "./createBoard.do";
-            writeForm.submit();
+            WriteForm.method = "post";
+            WriteForm.action = "./createBoard.do";
+            WriteForm.submit();
         }
     </script>
 
