@@ -1,9 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
-  작성자 : 윤태검
-
-  일시 : 2022-11-17
-  내용 : 회원 가입 화면 수정.
+  Created by IntelliJ IDEA.
+  User: User
+  Date: 2022-10-05
+  Time: 오후 2:38
+  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
@@ -123,14 +124,18 @@
                 let phoneNum = $("#mi_phone").val();
                 let phoneNum1 = $("#mi_phone1").val();
                 let phoneNum2 = $("#mi_phone2").val();
-                var sendNumber = phoneNum + phoneNum1 + phoneNum2;
+                console.log(phoneNum2);
+                const sendNumber = phoneNum+phoneNum1+phoneNum2;
+                if(sendNumber=="010"){
+                    alert("휴대폰 번호가 올바르지 않습니다");
+                }
                 $.ajax({
                     type: "POST",
-                    url: "./sendSMS.do",
-                    data: {to: sendNumber},
+                    url: "${contextPath}/member/sendSMS.do",
+                    data: {to : sendNumber},
                     cache: false,
-                    success: function (data) {
-                        if (data == "error") {
+                    success: function (data){
+                        if(data==" "){
                             alert("휴대폰 번호가 올바르지 않습니다.");
                         } else {
                             //alert("전송 완료");
@@ -483,6 +488,7 @@
         <div id="BG">
             <img src="${contextPath}/resources/image/background/배경.jpg" alt="배경" style="height: 100%; width: 100%">
         </div>
+
     </article>
 </section>
 

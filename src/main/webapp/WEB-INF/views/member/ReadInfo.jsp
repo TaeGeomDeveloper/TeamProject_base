@@ -71,12 +71,14 @@
     String mode = request.getParameter("mode");
     //System.out.println(mode);
     String read_only = "readonly='readonly'";
-    String border_none = "border:none;" +
+    String width = "width:500px;";
+    String border_none =
+            "border:none;" +
             "border-right:0px;" +
             "border-top:0px;" +
             "border-left:0px;" +
-            "border-bottom:0px";
-    MemberVO member = (MemberVO) request.getAttribute("member");
+            "border-bottom:0px;";
+    MemberVO member = (MemberVO)request.getAttribute("member");
     String mbId = member.getMi_id();
 %>
 

@@ -1,8 +1,8 @@
 <!--
-작성자 : 윤태검
-내용 : 타일즈 Header 부분 과 네비
+    작성자 : 윤태검
+    내용 : 타일즈 Header 부분 과 네비
 
-일시 : 2022.10.10 ~
+    일시 : 2022.10.10 ~
 -->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -22,8 +22,8 @@
 
 <%--헤더--%>
 <section class="head">
-    <header style="font-size: 60px">
-        스마트팜
+    <header>
+        Back To The Farm
     </header>
     <nav>
         <c:choose>
